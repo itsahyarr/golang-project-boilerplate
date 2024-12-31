@@ -11,6 +11,9 @@ A Golang boilerplate generator using repository pattern.
 ## Features
 
 - [x] Fiber based framework
+- [x] NoSQL based database driver (MongoDB)
+- [ ] SQL based database driver (PostgreSQL)
+- [ ] SQL based database driver (MySQL)
 - [ ] Gin based framework
 - [ ] Echo based framework
 - [x] Base CRUD interface
