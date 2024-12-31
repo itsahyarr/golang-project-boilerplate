@@ -4,10 +4,10 @@ run:
 .ONESHELL:
 module:
 	# make module directory
-	mkdir $(name)
+	mkdir -p internal/$(name)
 
 	# make handler file
-	cat <<- EOF > "$(name)/$(name)_router.go"
+	cat <<- EOF > "internal/$(name)/$(name)_router.go"
 	package $(name)
 
 	type $(name)Router struct {
@@ -28,7 +28,7 @@ module:
 	EOF
 
 	# make router file
-	cat <<- EOF > "$(name)/$(name)_handler.go"
+	cat <<- EOF > "internal/$(name)/$(name)_handler.go"
 	package $(name)
 	
 	type $(name)Handler struct {
@@ -44,7 +44,7 @@ module:
 	EOF
 
 	# make repository file (interface)
-	cat <<- EOF > "$(name)/$(name)_repository.go"
+	cat <<- EOF > "internal/$(name)/$(name)_repository.go"
 	package $(name)
 
 	type $(name)Repository interface{
@@ -58,7 +58,7 @@ module:
 	EOF
 	
 	# make repository file (implementation)
-	cat <<- EOF > "$(name)/$(name)_repository_impl.go"
+	cat <<- EOF > "internal/$(name)/$(name)_repository_impl.go"
 	package $(name)
 
 	type $(name)RepositoryImpl struct {
@@ -72,7 +72,7 @@ module:
 	EOF
 
 	# make models file
-	cat <<- EOF > "$(name)/$(name)_models.go"
+	cat <<- EOF > "internal/$(name)/$(name)_models.go"
 	package $(name)
 
 	type $(name)Model struct {
