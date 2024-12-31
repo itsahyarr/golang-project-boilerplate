@@ -30,3 +30,6 @@ A Golang boilerplate generator using repository pattern.
 > If module name is 2 or more words, please use camelCase without any space (refer to golang naming convention)
 
 `$ make module name=multiWordModuleName`
+
+---
+*You can give a star if it's useful for you, and feel free if you want to contribute in this project by adding a pull request.*
